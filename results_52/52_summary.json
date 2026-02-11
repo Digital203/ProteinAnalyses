@@ -1,0 +1,37 @@
+{
+  "chain_ids": [
+    "A"
+  ],
+  "residue_count": 216,
+  "atom_count": 1652,
+  "sequence": "MATFEIVNRCSYTVWAAASKGDAALDAGGRQLNSGESWTINVEPGTKGGKIWARTDCYFDDSGRGICRTGDCGGLLQCKRFGRPPTTLAEFSLNQYGKDYIDISNIKGFNVPMDFSPTTRGCRGVRCAADIVGQRPAKLKAPGGGCNDACTVFQTSEYCCTTGKCGPTEYSRFFKRLRPDAFSYVLDKPTTVTCPGSSNYRVTFCPTALEHHHHHH",
+  "aa_composition": {
+    "M": 2,
+    "A": 16,
+    "T": 20,
+    "F": 11,
+    "E": 7,
+    "I": 8,
+    "V": 10,
+    "N": 8,
+    "R": 15,
+    "C": 14,
+    "S": 13,
+    "Y": 8,
+    "W": 3,
+    "K": 11,
+    "G": 24,
+    "D": 13,
+    "L": 10,
+    "Q": 5,
+    "P": 12,
+    "H": 6
+  },
+  "radius_of_gyration": 16.89671052501237,
+  "score_stats": {
+    "mean": 79.10546296296296,
+    "std": 25.30461315665362,
+    "min": 31.48,
+    "max": 98.94
+  }
+}
