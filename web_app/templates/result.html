@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results - Protein Structural Profiler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .result-container { margin-top: 40px; margin-bottom: 60px; }
+        .report-card { border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: none; padding: 30px; background: white; }
+        .report-html img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .sticky-sidebar { position: sticky; top: 20px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Protein Profiler</a>
+    </div>
+</nav>
+
+<div class="container result-container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="report-card mb-4">
+                <div class="report-html">
+                    {{ report_html|safe }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="sticky-sidebar">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Actions</h5>
+                        <hr>
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('download', job_id=job_id) }}" class="btn btn-success">
+                                <i class="bi bi-download"></i> Download All (ZIP)
+                            </a>
+                            <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                                Analyze Another
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Quick Stats</h5>
+                        <p class="text-muted small">Job ID: {{ job_id }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4 text-muted border-top">
+    <p>&copy; 2026 Protein Structural Profiler</p>
+</footer>
+
+</body>
+</html>

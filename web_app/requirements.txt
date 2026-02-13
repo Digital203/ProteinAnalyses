@@ -1,0 +1,5 @@
+flask
+markdown
+numpy
+matplotlib
+gunicorn
